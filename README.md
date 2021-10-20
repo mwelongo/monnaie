@@ -30,17 +30,34 @@
 ## CRUD FUNCTIONALITIES
 
 #### App Components:
-*
+* Balance: shows how much the user has
+* SEND button: allows user to deduct money from balance, and add it to another user. Given 2 users, the SEND should increase the amount of the second user
+  * The SEND form has 2 inputs: RECIPIENT (user2) and AMOUNT (to be to user2's balance)
+* Top-UP: increases money to the Balance
+* Pay Bill: works same as SEND (will increase user2's balance and decrease user1)
+* Get Cash: also works as SEND, but just decreases user1's balance (no user2 involved)
+* RECENT Transactions: a scroll area that will display user's most recent transactions.
+  * Date
+  * Type of Transaction (Send, TopUp, PayBill, or Get Cash)
+  * Transaction Confirmed?
+  * Edit and Delete buttons
 
 ##### * Create Route:
-  * User
+  * The create route will work with all the 4 app functions: **SEND**, **TopUp**, **PayBill**, and **Get Cash**. At the end of each new transaction, the app will display a new CREATE item in the **Recent Transactions** sections/  
 ##### * Index
+* Will show all Components of the app, including a **Log Out** button
 ##### * Show
+* In the Recent Transactions, user will click on the transaction to see the details (date, type of transaction, confirmation, and options to edit and delete)
+
 ##### * New
+* Input form with Date, Type of Transaction, Amount and Confirmed
 
 ##### * Edit
+* Update the amount and/pr type of transaction
 ##### * Update
+* Update the amount and/pr type of transaction
 ##### * Destroy
+* Delete a transaction from Recent history
 
 
 ## REFERENCES & CREDITS
