@@ -24,7 +24,7 @@
 ![login-signup](https://i.imgur.com/GCamltO.png)
 ![login-signup](https://i.imgur.com/AxWdan9.png)
 
-View Wireframes
+#### View Wireframes
 ![views](https://i.imgur.com/YwkI410.png)
 
 #### How to Use the App
