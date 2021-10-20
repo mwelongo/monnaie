@@ -12,7 +12,12 @@
 ## HOW THE MONNAIE APP WORKS:
 
 #### User stories:
-What should people be able to do on your website?
+* Sign up, login
+* Add balance (top up, add balance)
+* view balance
+* Send money (deduct balance)
+* Pay stuff with app (deduct balance)
+* view most recent transactions
 
 #### Basic Wireframes:
 ##### Log In & Sign Up Prototype
@@ -20,6 +25,7 @@ What should people be able to do on your website?
 ![login-signup](https://i.imgur.com/AxWdan9.png)
 
 View Wireframes
+![views](https://i.imgur.com/YwkI410.png)
 
 #### How to Use the App
 
