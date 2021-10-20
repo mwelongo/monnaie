@@ -1,2 +1,2 @@
 # monnaie
-Monnaie finTech app project as part of General Assembly SEI bootcamp
+Monnaie finTech app, project 02 General Assembly SEI bootcamp
