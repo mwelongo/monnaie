@@ -16,7 +16,7 @@ What should people be able to do on your website?
 
 #### Basic Wireframes:
 ##### Log In & Sign Up Prototype
-![login-signup](https://www.canva.com/design/DAEtY49-kXE/lNKgheypEy8Kj7SLanI7zg/view?mode=prototype#untitled-page)
+![login-signup](https://www.canva.com/design/DAEtY49-kXE/lNKgheypEy8Kj7SLanI7zg/view?utm_content=DAEtY49-kXE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 View Wireframes
 
