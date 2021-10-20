@@ -27,7 +27,21 @@
 #### View Wireframes
 ![views](https://i.imgur.com/YwkI410.png)
 
-#### How to Use the App
+## CRUD FUNCTIONALITIES
+
+#### App Components:
+*
+
+##### * Create Route:
+  * User
+##### * Index
+##### * Show
+##### * New
+
+##### * Edit
+##### * Update
+##### * Destroy
+
 
 ## REFERENCES & CREDITS
 
