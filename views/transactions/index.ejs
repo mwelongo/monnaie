@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%- include ('../partials/head.ejs') %>
+</head>
+
+  <body>
+    <h1>MONNAIE</h1>
+
+    <a class="button" href="/transactions/new">New Transaction</a>
+
+    <h4>Recent Transactions</h4>
+
+    <div class="main-container">
+      <% for (let i = 0; i < records.length; i++){%>
+        <div class="record-item">
+        <label for="transaction">Transaction: </label><a href="/transactions/<%=records[i].id%>"><%=records[i].transaction%></a><br/>
+        <label for="amount">Amount: </label><a href="/transactions/<%=records[i].id%>"><%=records[i].amount%></a><br/>
+        </div>
+      <%}%>
+
+    </div>
+
+  </body>
+</html>

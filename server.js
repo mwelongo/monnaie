@@ -45,16 +45,16 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 // CONTROLLERS
 const transactionsController = require('./controllers/transactions.js')
-app.use('/', transactionsController)
+app.use('/transactions', transactionsController)
 
 //___________________
 // Routes
 //___________________
 //localhost:3000
-// app.get('/' , (req, res) => {
-//   // res.send('Welcome to Monnaie!');
-//   // res.redirect('/transactions')
-// });
+app.get('/' , (req, res) => {
+  // res.send('Welcome to Monnaie!');
+  res.redirect('/transactions')
+});
 
 //___________________
 //Listener
