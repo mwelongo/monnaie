@@ -51,10 +51,10 @@ app.use('/transactions', transactionsController)
 // Routes
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
-  // res.send('Welcome to Monnaie!');
-  res.redirect('/transactions')
-});
+// app.get('/' , (req, res) => {
+//   // res.send('Welcome to Monnaie!');
+//   // res.redirect('/transactions')
+// });
 
 //___________________
 //Listener
