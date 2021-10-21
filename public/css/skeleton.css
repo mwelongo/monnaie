@@ -25,19 +25,61 @@
 - Media Queries
 */
 
-/* New Styles for the Monnaie App */
-.main-container {
-  display: flex;
+/* New Styles for the Monnaie App - MUZABEL*/
+#new-btn {
+  position: relative;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* Source: https://www.w3schools.com/howto/howto_css_center_button.asp */
+
+.send-money, .balance, .transaction-buttons {
+  border: 3px solid green;
+  width: 45%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.transaction-buttons a {
+  margin: 1em;
+  /* display: inline; */
+}
+
+.recent-transactions {
+  display: block;
   flex-direction: row;
   flex-wrap: wrap;
+
+  height: 400px;
+  margin: auto;
+  width: 45%;
+  border: 3px solid red;
+  overflow: scroll;
 }
 .record-item {
   display: block;
   border: 1px solid navy;
-  margin: 10px;
-  width: 300px;
+  margin: auto;
+  width: 75%;
+  margin-top: 1em;
   text-align: center;
 }
+
+label {
+    text-align: right;
+    clear: both;
+    float:left;
+}
+/* Source: https://stackoverflow.com/questions/23530064/how-to-make-label-and-input-appear-on-the-same-line-on-an-html-form */
+
+h4 {
+  margin: auto;
+  width: 35%;
+}
+
 
 
 /* Grid

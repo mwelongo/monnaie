@@ -112,7 +112,10 @@
 * Set up app components: data/models (with some seed data), controllers, basic views (index, new, edit, show),styles (i'm using Skeleton)
 * JS / backend - work on CRUD and REST routes
 * Complete CRUD and REST routes (if needed)
-* Mathematical operations working (increments, deductions, balance)
+* Mathematical operations working:
+  * BALANCE button,
+  * increments,
+  * deductions
 * Heroku deployment works without any issues
 
 
