@@ -1,10 +1,10 @@
 //___________________
-//Dependencies
+// Dependencies
 //___________________
 const express = require('express');
 const methodOverride  = require('method-override');
-const mongoose = require ('mongoose');
-const app = express ();
+const mongoose = require('mongoose');
+const app = express();
 const db = mongoose.connection;
 require('dotenv').config()
 //___________________
@@ -43,16 +43,20 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+// CONTROLLERS
+const transactionsController = require('./controllers/transactions.js')
+app.use('/transactions', transactionsController)
 
 //___________________
 // Routes
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Welcome to Monnaie!');
+  // res.send('Welcome to Monnaie!');
+  res.redirect('/transactions')
 });
 
 //___________________
 //Listener
 //___________________
-app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+app.listen(PORT, () => console.log( 'Listening on port', PORT));
