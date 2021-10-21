@@ -8,7 +8,7 @@ const Seed = require('../models/seed_data.js')
 /// SEED DATA
 router.get('/seed', (req, res) => {
   Transaction.create(Seed, (error, seedData) => {
-    res.redirect('/transactions')
+    res.redirect('/')
   })
 })
 
