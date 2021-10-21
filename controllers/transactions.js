@@ -16,6 +16,11 @@ router.get('/seed', (req, res) => {
 /// ROUTES
 /// -------------------------
 
+/// NEW
+router.get('/new', (req, res) => {
+  res.render('transactions/new.ejs')
+})
+
 /// CREATE
 router.post('/', (req, res) => {
   console.log(req.body);

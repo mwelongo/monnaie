@@ -95,6 +95,7 @@
 
 ## REFERENCES & CREDITS
 
+* Select Tag in the NEW and EDIT views: referenced from https://www.w3schools.com/tags/tag_select.asp
 
 
 ========================
