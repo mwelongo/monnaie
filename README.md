@@ -9,6 +9,7 @@
 
 ## INSTALLATION
 
+
 ## HOW THE MONNAIE APP WORKS:
 
 #### User stories:
@@ -25,11 +26,9 @@
 ![login-signup](https://i.imgur.com/AxWdan9.png)
 
 #### View Wireframes
-![views](https://i.imgur.com/YwkI410.png)
+![views](https://i.imgur.com/mIcBTyN.png)
 
-## CRUD FUNCTIONALITIES
-
-#### App Components:
+## App Components:
 * Balance: shows how much the user has
 * SEND button: allows user to deduct money from balance, and add it to another user. Given 2 users, the SEND should increase the amount of the second user
   * The SEND form has 2 inputs: RECIPIENT (user2) and AMOUNT (to be to user2's balance)
@@ -42,25 +41,60 @@
   * Transaction Confirmed?
   * Edit and Delete buttons
 
-##### * Create Route:
-  * The create route will work with all the 4 app functions: **SEND**, **TopUp**, **PayBill**, and **Get Cash**. At the end of each new transaction, the app will display a new CREATE item in the **Recent Transactions** sections/  
-##### * Index
-* Will show all Components of the app, including a **Log Out** button
+## C.R.U.D FUNCTIONALITIES
+
+#### CREATE:
+  * The CREATE operation will work with all the 4 app buttons: **SEND**, **TopUp**, **PayBill**, and **Get Cash**. Each button will add a new document/item to the app, which will display in the **Recent Transactions** section.
+  * **Schema**: date, transaction type, amount, confirmed checkbox.
+
+#### READ/FIND:
+  * The app with display Recent Transactions and Balance on the screen
+  * **Recent Transactions** will be a scrollable div that will  display up to 10 transactions. An "All Transactions" button will be added to show all.
+  * **Balance** will update based on the CREATE and Update operations.
+
+#### UPDATE:
+* The **SEND** button on the app will be the main update operation - deducts the sender's balance and adds the receiver's balance. The other buttons will also have update functionalities
+* A user will also be able to access the SHOW page of a record and click on the EDIT button from there.
+
+#### DELETE:
+* In the **Recent Transactions**, a user clicks on a record and will be send to the show page of the transaction. The show page will contain a DELETE functionality.
+* It's also possible to have the delete on the Index page of **Recent Transactions**.
+
+### RESTful Routes
+
+##### * Index - Home Page
+* Header Nav (will repeat on all pages): _Logo_, About, Support, _Login_, _Log Out_
+* BALANCE: display current balance
+* SEND button (div): inputs will include _Receiver_, _Amount_, and a _Submit_ button
+* BUTTONS: TopUp, PayBill, GetCash (linked to CREATE and UPDATE functionalities)
+* RECENT TRANSACTION: link to the SHOW pages for the individual record. On the index page, display up to 10 records
+* Footer (will repeat on all pages): Contact
+
 ##### * Show
-* In the Recent Transactions, user will click on the transaction to see the details (date, type of transaction, confirmation, and options to edit and delete)
+  * In the _Recent Transactions_, user will click on the transaction to see the details (date, type of transaction, confirmation, and options to edit and delete)
 
 ##### * New
-* Input form with Date, Type of Transaction, Amount and Confirmed
+  * A CREATE input form with Date, Type of Transaction, Amount and Confirmed
+
+##### * Create
+  * A CREATE route receives data from the NEW form
 
 ##### * Edit
-* Update the amount and/pr type of transaction
+  * The SEND button will update the balance of 2 users: the sender (balance deduct) and receiver (balance increment).
+  * The TopUp button will increment the balance by the input amount
+  * The PayBill button will have same functionalities of the SEND button - with a sender and receiver.
+  * The Get Cash button will deduct the balance for the user.
+  * User will be able to EDIT each transaction record on its SHOW page
+
 ##### * Update
-* Update the amount and/pr type of transaction
+  * * An UPDATE route receives data from the NEW form
+
 ##### * Destroy
-* Delete a transaction from Recent history
+  * A DELETE route - one the SHOW and/or on the Index pages (_Recent history_), user can remove the record.
 
 
 ## REFERENCES & CREDITS
+
 
 
 ========================
