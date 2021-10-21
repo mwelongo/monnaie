@@ -45,7 +45,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 // CONTROLLERS
 const transactionsController = require('./controllers/transactions.js')
-app.use('/transactions', transactionsController)
+app.use('/', transactionsController)
 
 //___________________
 // Routes
