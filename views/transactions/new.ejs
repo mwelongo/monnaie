@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>new_tx</title>
+    <%- include ('../partials/head.ejs') %>
   </head>
+
   <body>
     <h2>New Transaction</h2>
 
+    <div class="new-item">
+      <form class="" action="/transactions" method="POST">
+        <label for="date">Date:</label>
+        <input type="date" name="date" autocomplete="on">
+        <label for="transaction">Transaction:</label>
+        <select class="" name="transaction">
+          <option value="send">Send Money</option>
+          <option value="top-up">Top Up</option>
+          <option value="pay-bill">Pay Bill</option>
+          <option value="get-cash">Get Catch</option>
+        </select>
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" value="">
+        <label for="confirmed">Confirmed: </label>
+        <input type="checkbox" name="confirmed" value="">
+
+        <input type="submit" name="" value="Submit">
+      </form>
+    </div>
 
   </body>
 </html>
-
-<div class="send-btn">
-  <form class="" action="/transactions" method="POST">
-    <label for="date">Date:</label>
-    <input type="date" name="date" autocomplete="on">
-    <label for="transaction">Transaction:</label>
-    <select class="" name="transaction">
-      <option value="send">Send Money</option>
-      <option value="top-up">Top Up</option>
-      <option value="pay-bill">Pay Bill</option>
-      <option value="get-cash">Get Catch</option>
-    </select>
-    <label for="amount">Amount:</label>
-    <input type="number" name="amount" value="">
-    <label for="confirmed">Confirmed: </label>
-    <input type="checkbox" name="confirmed" value="">
-
-    <input type="submit" name="" value="Submit">
-  </form>
-</div>

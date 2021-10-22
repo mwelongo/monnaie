@@ -16,6 +16,24 @@ router.get('/seed', (req, res) => {
 /// ROUTES
 /// -------------------------
 
+// UPDATE/PUT
+router.put('/:id', (req, res) => {
+  Transaction.findByIdAndUpdate(req.params.id, req.body,{new: true}, (err, record) => {
+    res.redirect('/transactions')
+  })
+})
+
+// EDIT
+router.get('/:id/edit', (req, res) => {
+  // res.send('EDIT')
+  Transaction.findById(req.params.id, (err, txRecord) => {
+    res.render(
+      'transactions/edit.ejs',
+      {record: txRecord}
+    )
+  })
+})
+
 /// INDEX
 router.get('/', (req, res) => {
   Transaction.find({}, (err, allRecords) => {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+  </head>
+
+  <body>
+    <div class="new-item">
+      <form action="/transactions/<%=record.id%>?_method=PUT" method="POST">
+        <label for="date">Date:</label>
+        <input type="date" name="date">
+        <label for="transaction">Transaction:</label>
+        <select class="" name="transaction">
+          <option value="send">Send Money</option>
+          <option value="top-up">Top Up</option>
+          <option value="pay-bill">Pay Bill</option>
+          <option value="get-cash">Get Catch</option>
+        </select>
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" value="">
+        <label for="confirmed">Confirmed: </label>
+        <input type="checkbox" name="confirmed" value="">
+
+        <input type="submit" name="" value="Submit">
+      </form>
+    </div>
+
+  </body>
+</html>

@@ -25,7 +25,9 @@
 - Media Queries
 */
 
+/* // ------------------------------
 /* New Styles for the Monnaie App - MUZABEL*/
+/* // ------------------------------ */
 #new-btn {
   position: relative;
   margin: 0;
@@ -92,6 +94,13 @@ h4 {
   width: 35%;
 }
 
+.record-div {
+  display: block;
+  align-items: baseline;
+  border: .5px solid darkgreen;
+  border-radius: 20% / 70%;
+  width: 30%
+}
 
 
 /* Grid
