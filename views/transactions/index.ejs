@@ -11,11 +11,12 @@
 
     <%const balance = records.map(item => item.amount).reduce((prev, curr) => prev + curr, 0);%>
     <!-- Source: https://www.delftstack.com/howto/javascript/sum-array-of-objects-javascript/ -->
+    <!-- Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript -->
 
 
     <div class="balance">
       <label for="balance"><h6>Balance: </h6></label>
-      <h3>$<%=balance%></h3>
+      <h3>$<%=balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></h3>
     </div>
 
 
