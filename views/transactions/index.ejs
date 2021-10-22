@@ -9,9 +9,13 @@
 
     <a class="button" id="new-btn" href="/transactions/new">New Transaction</a>
 
+    <%const balance = records.map(item => item.amount).reduce((prev, curr) => prev + curr, 0);%>
+    <!-- Source: https://www.delftstack.com/howto/javascript/sum-array-of-objects-javascript/ -->
+
+
     <div class="balance">
-      <h6>Balance: </h6>
-      <h3><%=records.amount%></h3>
+      <label for="balance"><h6>Balance: </h6></label>
+      <h3>$<%=balance%></h3>
     </div>
 
 
