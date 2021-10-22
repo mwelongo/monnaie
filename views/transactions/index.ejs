@@ -16,15 +16,18 @@
 
 
     <form class="" action="/transactions" method="POST">
+
     <div class="send-money">
       <h5>Send Money</h5>
-      <div class="receiver-amount">
-      <label for="receiver">Receiver</label>
-      <input type="text" name="receiver" value="">
-      <label for="amount">Amount</label>
-      <input type="text" name="amount" value="">
-      </div>
-      <input type="submit" name="" value="Confirm Send">
+      <form class="" action="/transactions" method="POST">
+        <div class="send-inputs">
+        <label for="receiver">Receiver</label>
+        <input type="text" name="receiver" value="<%=records.receiver%>">
+        <label for="amount">Amount</label>
+        <input type="text" name="amount" value="<%=records.amount%>">
+        </div>
+        <input type="submit" name="" value="Confirm Send">
+      </form>
     </div>
     </form>
 
@@ -39,9 +42,11 @@
     <div class="recent-transactions">
       <% for (let i = 0; i < records.length; i++){%>
         <div class="record-item">
-        <label for="transaction">Transaction: </label><a href="/transactions/<%=records[i].id%>"><%=records[i].transaction%></a><br/>
-        <label for="amount">Amount: </label>$<a href="/transactions/<%=records[i].id%>"><%=records[i].amount%></a><br/>
+          <label for="transaction">Transaction: </label><%=records[i].transaction%><br/>
+          <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
+          <a href="/transactions/<%=records[i].id%>">Show More</a>
         </div>
+      </a>
       <%}%>
 
     </div>

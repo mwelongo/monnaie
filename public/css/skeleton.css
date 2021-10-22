@@ -69,10 +69,13 @@
   overflow: scroll;
 }
 .record-item {
+  background-color: #bc3908;
+  color: yellow;
   display: block;
-  border: 1px solid navy;
+  border: 2px solid darkgreen;
   margin: auto;
   width: 75%;
+  height: 20%;
   margin-top: 1em;
   text-align: center;
 }
