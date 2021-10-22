@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%- include ('../partials/head.ejs') %>
+</head>
+
+  <body>
+    <h2>Transaction Info</h2>
+    <div class="record-div">
+      <p>Date: <%=record.date%></p>
+      <p>Transaction: <%=record.transaction%></p>
+      <p>Amount: $<%=record.amount%></p>
+      <% if (record.confirmed === true) {%>
+        <label for="confirmed">Status: </label>
+        <h5 style="color: green;">confirmed%></h5>
+      <%} else {%>
+        <label for="in-progress">Status: </label>
+        <h5 style="color: red;">in progress%></h5>
+      <%}%>
+
+      <a class="button edit-btn" href="/transactions/<%=record.id%>/edit">Edit Transaction</a>
+    </div>
+
+    <nav class="back">
+      <a class="button" href="/transactions">BACK</a>
+    </nav>
+
+  </body>
+</html>

@@ -1,7 +1,7 @@
 // Dependencies
 const express = require('express');
 const router = express.Router();
-const Transaction = require('../models/transactions_data.js');
+const Transaction = require('../models/transactions_data.js')
 const Seed = require('../models/seed_data.js')
 
 
@@ -32,6 +32,17 @@ router.get('/', (req, res) => {
 /// NEW
 router.get('/new', (req, res) => {
   res.render('transactions/new.ejs')
+})
+
+///SHOW
+router.get('/:id', (req, res) => {
+  Transaction.findById(req.params.id, (err, txRecord) => {
+    res.render(
+      'transactions/show.ejs',
+      {record: txRecord}
+    )
+  })
+
 })
 
 /// CREATE
