@@ -43,6 +43,15 @@
   margin-top: 1em;
 }
 
+.send-money {
+  display: block;
+  /* margin: 10px; */
+}
+
+.receiver-amount {
+  display: block;
+}
+
 .transaction-buttons a {
   margin: 1em;
   /* display: inline; */
