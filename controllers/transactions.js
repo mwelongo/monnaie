@@ -47,7 +47,7 @@ router.get('/', (req, res) => {
     res.render(
       'transactions/index.ejs',
       {
-        records: allRecords
+        records: allRecords,
       }
     )
   })
@@ -56,7 +56,9 @@ router.get('/', (req, res) => {
 
 /// NEW
 router.get('/new', (req, res) => {
-  res.render('transactions/new.ejs')
+  res.render(
+    'transactions/new.ejs',
+  )
 })
 
 ///SHOW
