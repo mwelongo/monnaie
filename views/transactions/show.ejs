@@ -20,7 +20,7 @@
 
       <nav class="edit-delete">
         <a class="button edit-btn" href="/transactions/<%=record.id%>/edit">Edit Transaction</a>
-        <form action="/transactions/record.id%>?_method=DELETE" method="POST">
+        <form action="/transactions/<%=record.id%>?_method=DELETE" method="POST">
           <input class="button delete-btn" type="submit" value="Delete">
         </form>
       </nav>

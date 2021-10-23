@@ -23,6 +23,13 @@ router.put('/:id', (req, res) => {
   })
 })
 
+// DELETE
+router.delete('/:id', (req, res) => {
+  Transaction.findByIdAndRemove(req.params.id, (err, record) => {
+    res.redirect('/transactions')
+  })
+})
+
 // EDIT
 router.get('/:id/edit', (req, res) => {
   // res.send('EDIT')

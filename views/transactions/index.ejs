@@ -50,6 +50,9 @@
           <label for="transaction">Transaction: </label><%=records[i].transaction%><br/>
           <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
           <a href="/transactions/<%=records[i].id%>">Show More</a>
+          <!-- <form action="/transactions/<%=records[i].id%>?_method=DELETE" method="POST">
+            <input class="button delete-btn" type="submit" value="Delete">
+          </form> -->
         </div>
       </a>
       <%}%>

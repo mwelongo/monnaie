@@ -7,8 +7,7 @@ const transactionSchema = new mongoose.Schema(
     date: Date,
     transaction: {type: String, required: true},
     amount: {type: Number, min: 1},
-    confirmed: Boolean,
-    receiver: String
+    confirmed: {type: Boolean, default: false}
   }
 )
 
