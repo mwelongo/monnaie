@@ -46,6 +46,7 @@
     <div class="recent-transactions">
       <% for (let i = 0; i < records.length; i++){%>
         <div class="record-item">
+          <label for="ate">Date: </label><%=records[i].date%><br/>
           <label for="transaction">Transaction: </label><%=records[i].transaction%><br/>
           <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
           <a href="/transactions/<%=records[i].id%>">Show More</a>

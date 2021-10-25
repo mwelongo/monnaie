@@ -11,11 +11,9 @@
       <p>Transaction: <%=record.transaction%></p>
       <p>Amount: $<%=record.amount%></p>
       <% if (record.confirmed === true) {%>
-        <label for="confirmed">Status: </label>
-        <h5 style="color: green;">confirmed%></h5>
+        <span style="color: green;">Confirmed%></span>
       <%} else {%>
-        <label for="in-progress">Status: </label>
-        <h5 style="color: red;">in progress%></h5>
+        <h5 style="color: red;">In Progress%></h5>
       <%}%>
 
       <nav class="edit-delete">

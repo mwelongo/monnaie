@@ -29,7 +29,7 @@
 ![views](https://i.imgur.com/mIcBTyN.png)
 
 ## App Components:
-* Balance: shows how much the user has
+* Balance: shows how much the user has - Total of all the quantities from the data
 * SEND button: allows user to deduct money from balance, and add it to another user. Given 2 users, the SEND should increase the amount of the second user
   * The SEND form has 2 inputs: RECIPIENT (user2) and AMOUNT (to be to user2's balance)
 * Top-UP: increases money to the Balance

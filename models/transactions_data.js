@@ -4,13 +4,14 @@ const mongoose = require('mongoose')
 
 const transactionSchema = new mongoose.Schema(
   {
-    date: Date,
+    date: {type: String, format: Date},
     transaction: {type: String, required: true},
     amount: {type: Number, min: 1},
-    confirmed: {type: Boolean, default: false},
+    confirmed: Boolean,
     receiver: String
   }
 )
+{date: "2000-01-01"}
 
 const Transaction = mongoose.model('Transaction', transactionSchema)
 

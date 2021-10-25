@@ -18,6 +18,12 @@ router.get('/seed', (req, res) => {
 
 // UPDATE/PUT
 router.put('/:id', (req, res) => {
+  if (req.body.confirmed === 'on') {
+    req.body.confirmed = true
+  } else {
+    req.body.confirmed = false
+  }
+  console.log(req.body);
   Transaction.findByIdAndUpdate(req.params.id, req.body,{new: true}, (err, record) => {
     res.redirect('/transactions')
   })

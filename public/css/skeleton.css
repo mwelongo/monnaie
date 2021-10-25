@@ -71,7 +71,7 @@
   overflow: scroll;
 }
 .record-item {
-  background-color: #bc3908;
+  background-color: green;
   color: yellow;
   display: block;
   border: 2px solid darkgreen;
@@ -80,13 +80,15 @@
   height: 20%;
   margin-top: 1em;
   text-align: center;
+  font-size: .8em;
 }
 
 label {
-    text-align: right;
-    clear: both;
-    float:left;
+  text-align: right;
+  clear: both;
+  float:left;
 }
+
 /* Source: https://stackoverflow.com/questions/23530064/how-to-make-label-and-input-appear-on-the-same-line-on-an-html-form */
 
 h4 {
