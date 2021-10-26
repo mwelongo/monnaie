@@ -53,22 +53,33 @@ router.get('/', (req, res) => {
     res.render(
       'transactions/index.ejs',
       {
-        records: allRecords,
+        records: allRecords
       }
     )
   })
-
 })
 
+//SORTING -- THIRD STAGE
+
+
 /// NEW
-router.get('/new', (req, res) => {
+router.get('/new/:txType', (req, res) => {
   res.render(
     'transactions/new.ejs',
+    {txType: req.params.txType}
   )
 })
 
+/// NEW
+// router.get('/new', (req, res) => {
+//   res.render(
+//     'transactions/new.ejs',
+//   )
+// })
+
 ///SHOW
 router.get('/:id', (req, res) => {
+  console.log(req.params.id);
   Transaction.findById(req.params.id, (err, txRecord) => {
     res.render(
       'transactions/show.ejs',

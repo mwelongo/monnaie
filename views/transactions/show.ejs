@@ -9,13 +9,13 @@
     <div class="record-div">
       <p>Date: <%=record.date%></p>
 
-      <% if (record.transaction === "Top-Up") {%>
+      <% if (record.transaction === "TopUp") {%>
         <span style="color: blue;">Transaction: Top Up%></span>
-      <%} else if (record.transaction === "Send Money") {%>
+      <%} else if (record.transaction === "SendMoney") {%>
         <span style="color: orange;">Transaction: Send Money%></span>
-      <%} else if (record.transaction === "Pay Bill") {%>
+      <%} else if (record.transaction === "PayBill") {%>
         <span style="color: orange;">Transaction: Pay Bill%></span>
-      <%} else if (record.transaction === "Get Cash") {%>
+      <%} else if (record.transaction === "GetCash") {%>
         <span style="color: orange;">Transaction: Get Cash%></span>
       <%}%>
 
@@ -28,7 +28,7 @@
       <%}%>
 
       <% if (record.receiver) {%>
-        <p>Paid to: $<%=record.receiver%></p>
+        <p>Paid to: <%=record.receiver%></p>
       <%}%>
 
       <nav class="edit-delete">

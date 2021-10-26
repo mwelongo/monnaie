@@ -13,7 +13,6 @@
     <!-- Source: https://www.delftstack.com/howto/javascript/sum-array-of-objects-javascript/ -->
     <!-- Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript -->
 
-
     <div class="balance">
       <label for="balance"><h6>Balance: </h6></label>
       <h4>$<%=balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></h4>
@@ -36,9 +35,9 @@
     </form>
 
     <div class="transaction-buttons">
-      <a class="button" href="/transactions/new">Top Up</a>
-      <a class="button" href="#">Pay Bill</a>
-      <a class="button" href="#">Get Cash</a>
+      <a class="button" href="/transactions/new/TopUp">Top Up</a>
+      <a class="button" href="/transactions/new/PayBill">Pay Bill</a>
+      <a class="button" href="/transactions/new/GetCash">Get Cash</a>
     </div>
 
     <h4> Recent Transactions</h4>
@@ -46,8 +45,8 @@
     <div class="recent-transactions">
       <% for (let i = 0; i < records.length; i++){%>
         <div class="record-item">
-          <label for="ate">Date: </label><%=records[i].date%><br/>
-          <label for="transaction">Transaction: </label><%=records[i].transaction%><br/>
+          <label for="date">Date: </label><%=records[i].date%><br/>
+          <label for="transaction">Transaction:</label><%=records[i].transaction%><br/>
           <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
           <a href="/transactions/<%=records[i].id%>">Show More</a>
         </div>

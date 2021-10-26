@@ -8,17 +8,12 @@
     <h2>New Transaction</h2>
 
     <div class="new-item">
+      <!-- <p for="transaction">Transaction: <%=txType%></p> -->
       <form class="" action="/transactions" method="POST">
         <label for="date">Date:</label>
-        <input type="date" name="date>
-        <label for="transaction">Transaction:</label>
-        <select class="" name="transaction">
-          <option value="Top-Up">Top Up</option>
-          <option value="Send Money">Send Money</option>
-          <option value="Pay Bill">Pay Bill</option>
-          <option value="Get Cash">Get Catch</option>
-        </select>
-        <label for="receiver">Amount:</label>
+        <input type="date" name="date">
+        <input type="text" name="transaction" value="<%=txType%>" hidden>
+        <label for="receiver">Receiver:</label>
         <input type="text" name="receiver" value="">
         <label for="amount">Amount:</label>
         <input type="number" name="amount" value="">
