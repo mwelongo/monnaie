@@ -132,6 +132,7 @@ h4 {
 
 .edit-delete {
   display: flex;
+  flex-wrap: wrap;
 }
 .edit-btn, .delete-btn, .back-btn {
   margin: .5em;
