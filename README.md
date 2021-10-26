@@ -51,13 +51,14 @@
   * The app with display Recent Transactions and Balance on the screen
   * **Recent Transactions** will be a scrollable div that will  display up to 10 transactions. An "All Transactions" button will be added to show all.
   * **Balance** will update based on the CREATE and Update operations.
+  * The **Show More* button opens the record Show Page, which contains the transaction date, type, amount, confirmation, and receiver.
 
 #### UPDATE:
-* The **SEND** button on the app will be the main update operation - deducts the sender's balance and adds the receiver's balance. The other buttons will also have update functionalities
-* A user will also be able to access the SHOW page of a record and click on the EDIT button from there.
+* On the record SHOW page, _Edit Transaction_ button will allow user to update the transaction date and amount.
+* The transaction buttons (Send Money, Top Up, Pay Bill, Get Cash) will automatically update the balance amount
 
 #### DELETE:
-* In the **Recent Transactions**, a user clicks on a record and will be send to the show page of the transaction. The show page will contain a DELETE functionality.
+* On the record SHOW page, the DELETE button will allow the remove the record.
 * It's also possible to have the delete on the Index page of **Recent Transactions**.
 
 ### RESTful Routes

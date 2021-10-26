@@ -15,8 +15,10 @@
       <form class="" action="/transactions" method="POST">
         <input type="text" name="date" value="<%=today%>" hidden>
         <input type="text" name="transaction" value="<%=txType%>" hidden>
-        <label for="receiver">Receiver:</label>
-        <input type="text" name="receiver" value="">
+        <% if (txType === "PayBill" || txType === "SendMoney") {%>
+          <label for="receiver">Receiver:</label>
+          <input type="text" name="receiver" value="">
+        <%}%>
         <label for="amount">Amount:</label>
         <input type="number" name="amount" value="">
         <label for="confirmed">Confirmed: </label>
