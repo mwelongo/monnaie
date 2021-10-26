@@ -36,6 +36,13 @@ router.delete('/:id', (req, res) => {
   })
 })
 
+// PATCH
+router.patch('/', (req, res) => {
+  Transaction.find({}, (error, product) => {
+    res.render(`index.ejs`)
+  })
+})
+
 // EDIT
 router.get('/:id/edit', (req, res) => {
   // res.send('EDIT')
