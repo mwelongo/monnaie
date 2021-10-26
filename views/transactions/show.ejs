@@ -8,12 +8,27 @@
     <h2>Transaction Info</h2>
     <div class="record-div">
       <p>Date: <%=record.date%></p>
-      <p>Transaction: <%=record.transaction%></p>
+
+      <% if (record.transaction === "Top-Up") {%>
+        <span style="color: blue;">Transaction: Top Up%></span>
+      <%} else if (record.transaction === "Send Money") {%>
+        <span style="color: orange;">Transaction: Send Money%></span>
+      <%} else if (record.transaction === "Pay Bill") {%>
+        <span style="color: orange;">Transaction: Pay Bill%></span>
+      <%} else if (record.transaction === "Get Cash") {%>
+        <span style="color: orange;">Transaction: Get Cash%></span>
+      <%}%>
+
+
       <p>Amount: $<%=record.amount%></p>
       <% if (record.confirmed === true) {%>
         <span style="color: green;">Confirmed%></span>
       <%} else {%>
         <h5 style="color: red;">In Progress%></h5>
+      <%}%>
+
+      <% if (record.receiver) {%>
+        <p>Paid to: $<%=record.receiver%></p>
       <%}%>
 
       <nav class="edit-delete">
