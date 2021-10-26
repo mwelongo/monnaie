@@ -42,7 +42,7 @@
 }
 /* Source: https://www.w3schools.com/howto/howto_css_center_button.asp */
 
-.send-money, .balance, .transaction-buttons {
+.balance, .transaction-buttons {
   font-family: 'Lato', sans-serif;
   width: 50%;
   margin: auto;
@@ -59,30 +59,9 @@
   text-align: center;
 }
 
-.send-money, .balance, .transaction-buttons, .recent-transactions {
+.balance, .transaction-buttons, .recent-transactions, .record-div, .new-item {
   border: .15em solid darkgreen;
   border-radius: 20px;
-}
-
-.send-money {
-  display: block;
-  /* margin: 10px; */
-}
-
-.send-inputs label {
-  font-size: 1.5em;
-  margin-right: .5em;
-}
-.send-inputs  {
-  display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-.send-inputs input[type="text"] {
-  margin-right: 1em;
-  /* align-items: baseline; */
-  flex-wrap: wrap;
 }
 
 .receiver-amount {
@@ -99,7 +78,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   overflow: scroll;
-  height: 40em;
+  height:45em;
   margin: auto;
   width: 55%;
 
@@ -125,6 +104,10 @@
   line-height: 1.25;
 
 }
+.record-div {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+}
 
 label {
   /* text-align: right; */
@@ -133,18 +116,25 @@ label {
 }
 
 /* Source: https://stackoverflow.com/questions/23530064/how-to-make-label-and-input-appear-on-the-same-line-on-an-html-form */
-
 h4 {
   margin: auto;
   width: 35%;
 }
 
-.record-div {
+.record-div, .new-item {
   display: block;
   align-items: baseline;
-  border: .5px solid darkgreen;
-  border-radius: 20% / 70%;
-  width: 30%
+  margin: auto;
+  width: 55%;
+  height: auto;
+  padding: 2em;
+}
+
+.edit-delete {
+  display: flex;
+}
+.edit-btn, .delete-btn, .back-btn {
+  margin: .5em;
 }
 
 

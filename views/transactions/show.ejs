@@ -9,45 +9,48 @@
       <%- include ('../partials/nav.ejs') %>
     </nav>
 
-    <h2>Transaction Info</h2>
+
 
     <div class="record-div">
+      <h2>Transaction Info</h2>
+
       <p>Date: <%=record.date%></p>
 
       <% if (record.transaction === "TopUp") {%>
-        <span style="color: blue;">Transaction: Top Up%></span>
+        Transaction: <span style="color: blue;">Top Up%></span>
       <%} else if (record.transaction === "SendMoney") {%>
-        <span style="color: orange;">Transaction: Send Money%></span>
+        Transaction: <span style="color: orange;">Send Money%></span>
       <%} else if (record.transaction === "PayBill") {%>
-        <span style="color: orange;">Transaction: Pay Bill%></span>
+        Transaction: <span style="color: orange;">Pay Bill%></span>
       <%} else if (record.transaction === "GetCash") {%>
-        <span style="color: orange;">Transaction: Get Cash%></span>
+        Transaction: <span style="color: orange;">Get Cash%></span>
       <%}%>
 
 
       <p>Amount: $<%=record.amount%></p>
       <% if (record.confirmed === true) {%>
-        <span style="color: green;">Confirmed%></span>
+        Status: <span style="color: green;">Confirmed%></span>
       <%} else {%>
-        <h5 style="color: red;">In Progress%></h5>
+        Status: <span style="color: red;">In Progress%></span>
       <%}%>
 
       <% if (record.receiver) {%>
         <p>Paid to: <%=record.receiver%></p>
       <%}%>
 
-      <nav class="edit-delete">
+      <div class="edit-delete">
         <a class="button edit-btn" href="/transactions/<%=record.id%>/edit">Edit Transaction</a>
         <form action="/transactions/<%=record.id%>?_method=DELETE" method="POST">
           <input class="button delete-btn" type="submit" value="Delete">
         </form>
-      </nav>
+      </div>
+
+
+      <a class="button back-btn" href="/transactions">BACK</a>
 
     </div>
 
-    <nav class="back">
-      <a class="button" href="/transactions">BACK</a>
-    </nav>
+
 
   </body>
 </html>

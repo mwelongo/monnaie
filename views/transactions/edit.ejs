@@ -16,7 +16,7 @@
     <div class="new-item">
       <form action="/transactions/<%=record.id%>?_method=PUT" method="POST">
         <label for="date">Date:</label>
-        <input type="text" name="date" value="<%=today%>">
+        <input type="date" name="date" value="<%=today%>">
         <input type="text" name="transaction" value="<%=record.transaction%>" hidden>
         <% if (record.transaction === "PayBill" || record.transaction === "SendMoney") {%>
           <label for="receiver">Receiver:</label>

@@ -9,12 +9,11 @@
       <%- include ('../partials/nav.ejs') %>
     </nav>
 
-    <h2>New Transaction</h2>
-
     <!-- Source for the Date Auto Input: https://css-tricks.com/prefilling-date-input/  -->
     <% let today = new Date().toISOString().substr(0, 10);%>
 
     <div class="new-item">
+      <h2>New Transaction</h2>
       <!-- <p for="transaction">Transaction: <%=txType%></p> -->
       <form class="" action="/transactions" method="POST">
         <input type="text" name="date" value="<%=today%>" hidden>
@@ -30,11 +29,10 @@
 
         <input type="submit" name="" value="Submit">
       </form>
+
+      <a class="button back-btn" href="/transactions">BACK</a>
     </div>
 
-    <nav class="back">
-      <a class="button" href="/transactions">BACK</a>
-    </nav>
 
   </body>
 </html>
