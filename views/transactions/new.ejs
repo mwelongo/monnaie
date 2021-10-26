@@ -17,15 +17,17 @@
       <!-- <p for="transaction">Transaction: <%=txType%></p> -->
       <form class="" action="/transactions" method="POST">
         <input type="text" name="date" value="<%=today%>" hidden>
-        <input type="text" name="transaction" value="<%=txType%>" hidden>
-        <% if (txType === "PayBill" || txType === "SendMoney") {%>
-          <label for="receiver">Receiver:</label>
-          <input type="text" name="receiver" value="">
-        <%}%>
-        <label for="amount">Amount:</label>
-        <input type="number" name="amount" value="">
+        <div class="new-inputs">
+          <input type="text" name="transaction" value="<%=txType%>" hidden>
+          <% if (txType === "PayBill" || txType === "SendMoney") {%>
+            <label for="receiver">Receiver:</label>
+            <input type="text" name="receiver" value="">
+          <%}%>
+          <label for="amount">Amount:</label>
+          <input type="number" name="amount" value="">
+        </div>
         <label for="confirmed">Confirmed: </label>
-        <input type="checkbox" name="confirmed">
+        <input type="checkbox" name="confirmed"><br/>
 
         <input type="submit" name="" value="Submit">
       </form>

@@ -13,27 +13,27 @@
 
     <% let today = new Date().toISOString().substr(0, 10);%>
 
-    <div class="new-item">
+    <div class="new-item edit-div">
       <form action="/transactions/<%=record.id%>?_method=PUT" method="POST">
-        <label for="date">Date:</label>
+        <label for="date">Date:   </label>
         <input type="date" name="date" value="<%=today%>">
-        <input type="text" name="transaction" value="<%=record.transaction%>" hidden>
-        <% if (record.transaction === "PayBill" || record.transaction === "SendMoney") {%>
-          <label for="receiver">Receiver:</label>
-          <input type="text" name="receiver" value="">
-        <%}%>
-        <label for="amount">Amount:</label>
-        <input type="number" name="amount" value="">
+        <div class="new-inputs">
+          <input type="text" name="transaction" value="<%=record.transaction%>" hidden>
+          <% if (record.transaction === "PayBill" || record.transaction === "SendMoney") {%>
+            <label for="receiver">Receiver: </label>
+            <input type="text" name="receiver" value="">
+          <%}%>
+          <label for="amount">Amount:</label>
+          <input type="number" name="amount" value="">
+        </div>
         <label for="confirmed">Confirmed: </label>
-        <input type="checkbox" name="confirmed">
+        <input type="checkbox" name="confirmed"><br/>
 
-        <input type="submit" name="" value="Submit">
+        <input type="submit" name="" value="Submit"><br/>
       </form>
-    </div>
 
-    <nav class="back">
-      <a class="button" href="/transactions/<%=record.id%>">BACK</a>
-    </nav>
+      <a class="button back-btn" href="/transactions/<%=record.id%>">BACK</a>
+    </div>
 
   </body>
 </html>

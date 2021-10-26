@@ -44,7 +44,7 @@
 
 .balance, .transaction-buttons {
   font-family: 'Lato', sans-serif;
-  width: 50%;
+  width: 55%;
   margin: auto;
   margin-top: 1em;
   padding: 2%;
@@ -80,7 +80,7 @@
   overflow: scroll;
   height:45em;
   margin: auto;
-  width: 55%;
+  width: 60%;
 
 }
 #recent-tx {
@@ -88,8 +88,6 @@
   text-transform: uppercase;
 }
 .record-item {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5em;
   background-color: darkgreen;
   color: #D6EEEB;
   display: block;
@@ -104,7 +102,7 @@
   line-height: 1.25;
 
 }
-.record-div {
+.record-item, .record-div, .new-item {
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
 }
@@ -124,19 +122,24 @@ h4 {
 .record-div, .new-item {
   display: block;
   align-items: baseline;
+  flex-wrap: wrap;
   margin: auto;
   width: 55%;
   height: auto;
   padding: 2em;
 }
 
-.edit-delete {
+.edit-delete, .new-inputs {
   display: flex;
   flex-wrap: wrap;
 }
-.edit-btn, .delete-btn, .back-btn {
+.edit-btn, .delete-btn, .back-btn, .new-inputs {
   margin: .5em;
 }
+.new-inputs {
+  /* margin-right: 25%; */
+}
+
 
 
 /* Grid
@@ -289,11 +292,11 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 2em;
+  height: 36px;;
   padding: 0 30px;
   color: #555;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 24px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .2rem;
@@ -386,7 +389,7 @@ label,
 legend {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 600; }
+  font-weight: 600;}
 fieldset {
   padding: 0;
   border-width: 0; }
