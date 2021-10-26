@@ -5,9 +5,9 @@
 </head>
 
   <body>
-    <nav>
+    <nav class="container">
     <%- include ('../partials/nav.ejs') %>
-    </nav>    
+    </nav>
 
     <!-- <a class="button" id="new-btn" href="/transactions/new">New Transaction</a> -->
 
@@ -16,27 +16,12 @@
     <!-- Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript -->
 
     <div class="balance">
-      <label for="balance"><h6>Balance: </h6></label>
-      <h4>$<%=balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></h4>
+      <label for="balance"><h5>Balance: </h5></label>
+      <h2>$<%=balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></h2>
     </div>
-
-    <div class="send-money">
-      <h5>Send Money</h5>
-      <form class="" action="#" method="POST">
-        <div class="send-inputs">
-        <label for="receiver">Receiver</label>
-        <input type="text" name="receiver" value="<%=records.receiver%>">
-        <label for="amount">Amount</label>
-        <input type="text" name="amount" value="<%=records.amount%>">
-        </div>
-        <input type="text" name="amount" value="<%=balance - records.amount%>" hidden>
-        <input type="submit" name="" value="Confirm Send">
-      </form>
-    </div>
-
-
 
     <div class="transaction-buttons">
+      <a class="button" href="/transactions/new/SendMoney">Send Money</a>
       <a class="button" href="/transactions/new/TopUp">Top Up</a>
       <a class="button" href="/transactions/new/PayBill">Pay Bill</a>
       <a class="button" href="/transactions/new/GetCash">Get Cash</a>
@@ -44,7 +29,7 @@
 
 
 
-    <h4> Recent Transactions</h4>
+    <h4 id="recent-tx"> Recent Transactions</h4>
 
     <div class="recent-transactions">
       <% for (let i = 0; i < records.length; i++){%>

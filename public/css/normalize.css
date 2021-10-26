@@ -43,7 +43,7 @@ menu,
 nav,
 section,
 summary {
-  display: block;
+  /* display: block; */
 }
 
 /**
@@ -135,6 +135,11 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  font-weight: 700;
+}
+
+h1, h2, h4, h5 {
+  font-family: 'Nunito', sans-serif;
 }
 
 /**
@@ -183,8 +188,8 @@ sub {
 
 img {
   border: 0;
-  width: 100px;
-  height: 100px;
+  width: 10em;
+  /* height: 100px; */
 }
 
 /**
