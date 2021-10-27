@@ -4,7 +4,7 @@
 
 ## SUMMARY
 * Project Title: **Monnaie App**
-* Idea Description: _Monnaie_, an app that aims to allow the user to easily deposit, withdraw, save, and send money
+* Idea Description: _Monnaie_, a money app to allow user to send, top up, pay bills, and get cash.
 * Heroku link: https://monnaie-app.herokuapp.com/
 
 ## INSTALLATION
@@ -91,7 +91,7 @@
   * * An UPDATE route receives data from the NEW form
 
 ##### * Destroy
-  * A DELETE route - one the SHOW and/or on the Index pages (_Recent history_), user can remove the record.
+  * A DELETE route - one the SHOW page, user can remove the record document.
 
 
 ## REFERENCES & CREDITS
@@ -100,7 +100,7 @@
 * Creating the Total Balance:
   * https://www.delftstack.com/howto/javascript/sum-array-of-objects-javascript/
   * Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
-*   Automatic Date Input: https://css-tricks.com/prefilling-date-input/ 
+*   Automatic Date Input: https://css-tricks.com/prefilling-date-input/
 
 
 ========================
