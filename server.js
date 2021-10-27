@@ -4,9 +4,13 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
+const session = require('express-session')
+
+// CONFIGURATION
 const app = express();
 const db = mongoose.connection;
 require('dotenv').config()
+
 //___________________
 //Port
 //___________________
@@ -30,7 +34,7 @@ db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 //___________________
-//Middleware
+// MIDDLEWARE
 //___________________
 
 //use public folder for static assets
@@ -43,9 +47,21 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
+
 // CONTROLLERS
 const transactionsController = require('./controllers/transactions.js')
 app.use('/transactions', transactionsController)
+const userController = require('./controllers/users.js')
+app.use('/users', userController)
+const sessionController = require('./controllers/sessions.js')
+app.use('/sessions', sessionController)
 
 //___________________
 // Routes

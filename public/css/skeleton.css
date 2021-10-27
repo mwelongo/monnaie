@@ -59,7 +59,7 @@
   text-align: center;
 }
 
-.balance, .transaction-buttons, .recent-transactions, .record-div, .new-item {
+.balance, .transaction-buttons, .recent-transactions, .record-div, .new-item, .login-div {
   border: .15em solid darkgreen;
   border-radius: 20px;
 }
@@ -102,7 +102,7 @@
   line-height: 1.25;
 
 }
-.record-item, .record-div, .new-item {
+.record-item, .record-div, .new-item, .login-div, .link-to-signup {
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
 }
@@ -110,6 +110,9 @@
 label {
   /* text-align: right; */
   clear: both;
+  /* float:left; */
+}
+.record-item label {
   float:left;
 }
 
@@ -119,7 +122,7 @@ h4 {
   width: 35%;
 }
 
-.record-div, .new-item {
+.record-div, .new-item, .login-div, .signup-div {
   display: block;
   align-items: baseline;
   flex-wrap: wrap;
@@ -133,15 +136,32 @@ h4 {
   display: flex;
   flex-wrap: wrap;
 }
-.edit-btn, .delete-btn, .back-btn, .new-inputs {
+.edit-btn, .delete-btn, .back-btn, .new-inputs, .login-div, .link-to-signup, .signup-div {
   margin: .5em;
 }
 .new-inputs {
   /* margin-right: 25%; */
 }
 
+.login-div, .signup-div {
+  /* display: block; */
+  background-color: darkgreen;
+  /* color: white; */
+}
+.login-div label, .login-div h2, .signup-div label, .signup-div h2 {
+  color: white;
+}
 
 
+.login-div input[type="submit"], .signup-div input[type="submit"] {
+  color: white;
+}
+.link-to-signup {
+  color: darkgreen;
+}
+
+
+/* //// ------------------------------------------------ */
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
