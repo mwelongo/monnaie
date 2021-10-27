@@ -7,7 +7,9 @@
 * Idea Description: _Monnaie_, a money app to allow user to send, top up, pay bills, and get cash.
 * Heroku link: https://monnaie-app.herokuapp.com/
 
-## INSTALLATION
+## TECHNOLOGY
+* JavaScript/Express, Mongoose, NodeJs
+* Using CRUD functionalities
 
 
 ## HOW THE MONNAIE APP WORKS:
@@ -89,6 +91,10 @@
 ##### * Destroy
   * A DELETE route - one the SHOW page, user can remove the record document.
 
+## Work in Progress
+* Making some of the CREATE buttons (eg SEND MONEY) deduct the amount from the Balance
+* Sort Recent Transactions by the order of most recent
+
 
 ## REFERENCES & CREDITS
 
@@ -99,7 +105,6 @@
 *   Automatic Date Input: https://css-tricks.com/prefilling-date-input/
 
 
-========================
 <!-- ## Tentative Schedule:
 
 #### October 20:
