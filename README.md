@@ -9,8 +9,9 @@
 
 ## TECHNOLOGY
 * JavaScript/Express, Mongoose, NodeJs
-* Using CRUD functionalities
-
+* Used full CRUD functionalities
+* CSS Framework: Skeleton (and some of Materialize)
+* Responsive, mobile-first design
 
 ## HOW THE MONNAIE APP WORKS:
 
@@ -91,7 +92,7 @@
 ##### * Destroy
   * A DELETE route - one the SHOW page, user can remove the record document.
 
-## Work in Progress
+## WORK IN PROGRESS
 * Making some of the CREATE buttons (eg SEND MONEY) deduct the amount from the Balance
 * Sort Recent Transactions by the order of most recent
 
