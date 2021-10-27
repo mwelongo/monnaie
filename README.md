@@ -81,10 +81,6 @@
   * A CREATE route receives data from the NEW form
 
 ##### * Edit
-  * The SEND button will update the balance of 2 users: the sender (balance deduct) and receiver (balance increment).
-  * The TopUp button will increment the balance by the input amount
-  * The PayBill button will have same functionalities of the SEND button - with a sender and receiver.
-  * The Get Cash button will deduct the balance for the user.
   * User will be able to EDIT each transaction record on its SHOW page
 
 ##### * Update
