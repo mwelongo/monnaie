@@ -100,7 +100,7 @@
 
 
 ========================
-## Tentative Schedule:
+<!-- ## Tentative Schedule:
 
 #### October 20:
 * Complete project idea and Wireframes (DONE)
@@ -127,4 +127,4 @@
 * App CSS
 * Add additional features
 
-###
+### -->
