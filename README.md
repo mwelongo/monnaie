@@ -97,6 +97,10 @@
 ## REFERENCES & CREDITS
 
 * Select Tag in the NEW and EDIT views: referenced from https://www.w3schools.com/tags/tag_select.asp
+* Creating the Total Balance:
+  * https://www.delftstack.com/howto/javascript/sum-array-of-objects-javascript/
+  * Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+*   Automatic Date Input: https://css-tricks.com/prefilling-date-input/ 
 
 
 ========================

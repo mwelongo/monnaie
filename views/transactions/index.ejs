@@ -10,8 +10,6 @@
     <%- include ('../partials/logins.ejs') %>
     </nav>
 
-    <!-- <a class="button" id="new-btn" href="/transactions/new">New Transaction</a> -->
-
     <%const balance = records.map(item => item.amount).reduce((prev, curr) => prev + curr, 0);%>
     <!-- Source: https://www.delftstack.com/howto/javascript/sum-array-of-objects-javascript/ -->
     <!-- Source: https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript -->
@@ -28,8 +26,6 @@
       <a class="button" href="/transactions/new/GetCash">Get Cash</a>
     </div>
 
-
-
     <h4 id="recent-tx"> Recent Transactions</h4>
 
     <div class="recent-transactions">
@@ -37,7 +33,12 @@
         <div class="record-item">
           <label for="date">Date: </label><%=records[i].date%><br/>
           <label for="transaction">Transaction:</label><%=records[i].transaction%><br/>
-          <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
+          <% if (records[i].transaction === "SendMoney") {%>
+            <label for="amount">Amount: </label>$<%=(-Math.abs(records[i].amount))%></a><br/>
+          <%} else {%>
+            <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
+          <%}%>
+
           <a href="/transactions/<%=records[i].id%>">Show More</a>
         </div>
       </a>
