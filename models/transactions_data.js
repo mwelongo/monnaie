@@ -13,8 +13,6 @@ const transactionSchema = new mongoose.Schema(
   {timestamps: true}
 )
 {date: "2000-01-01"}
-sort = {timestamps: 1}
-// collection.find({}, limit=10).sort(sort)
 
 const Transaction = mongoose.model('Transaction', transactionSchema)
 

@@ -75,10 +75,11 @@ router.get('/', isAuthenticated, (req, res) => {
       }
     )
   })
+
 })
 
-//SORTING -- THIRD STAGE
-
+//SORTING
+  // Transaction.find().sort({timestamps:-1})
 
 /// NEW
 router.get('/new/:txType', (req, res) => {
