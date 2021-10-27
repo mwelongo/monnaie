@@ -28,8 +28,13 @@
 /* // ------------------------------
 /* New Styles for the Monnaie App - MUZABEL*/
 /* // ------------------------------ */
+#header-title {
+  text-decoration: none;
+  width: 60%;
+}
 .container h1 {
   margin-left: 10%;
+  align-items: baseline;
 }
 
 #new-btn {
@@ -158,6 +163,44 @@ h4 {
 }
 .link-to-signup {
   color: darkgreen;
+}
+
+.logout-btn {
+  background-color: darkgreen !important;
+  color: white;
+}
+.logout-btn {
+  background-color: darkgreen !important;
+  color: white;
+}
+
+.right {
+  float: right !important;
+}
+
+ul {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+  margin-right: 10%
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.btn-small {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  color: red;
 }
 
 
@@ -314,7 +357,7 @@ input[type="button"] {
   display: inline-block;
   height: 36px;;
   padding: 0 30px;
-  color: #555;
+  /* color: #555; */
   text-align: center;
   font-size: 24px;
   font-weight: 600;
