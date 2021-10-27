@@ -27,8 +27,13 @@
         Transaction: <span style="color: orange;">Get Cash%></span>
       <%}%>
 
+      <% if (record.transaction === "SendMoney" || record.transaction === "PayBill" || record.transaction === "GetCash") {%>
+        <p>Amount: -$<%=record.amount%></p>
+      <%} else if (record.transaction === "TopUp"){%>
+        <p>Amount: $<%=record.amount%></p>
+      <%}%>
 
-      <p>Amount: $<%=record.amount%></p>
+      <!-- <p>Amount: $<%=record.amount%></p> -->
       <% if (record.confirmed === true) {%>
         Status: <span style="color: green;">Confirmed%></span>
       <%} else {%>

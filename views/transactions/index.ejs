@@ -33,7 +33,7 @@
         <div class="record-item">
           <label for="date">Date: </label><%=records[i].date%><br/>
           <label for="transaction">Transaction:</label><%=records[i].transaction%><br/>
-          <% if (records[i].transaction === "SendMoney") {%>
+          <% if (records[i].transaction === "SendMoney" || records[i].transaction === "PayBill" || records[i].transaction === "GetCash") {%>
             <label for="amount">Amount: </label>$<%=(-Math.abs(records[i].amount))%></a><br/>
           <%} else {%>
             <label for="amount">Amount: </label>$<%=records[i].amount%></a><br/>
