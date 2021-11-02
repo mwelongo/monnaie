@@ -65,7 +65,7 @@ router.get('/:id/edit', isAuthenticated, (req, res) => {
 })
 
 /// INDEX
-router.get('/', isAuthenticated, (req, res) => {
+router.get('/', (req, res) => {
   Transaction.find({}, (err, allRecords) => {
     res.render(
       'transactions/index.ejs',
@@ -82,7 +82,7 @@ router.get('/', isAuthenticated, (req, res) => {
   // Transaction.find().sort({timestamps:-1})
 
 /// NEW
-router.get('/new/:txType', (req, res) => {
+router.get('/new/:txType', isAuthenticated, (req, res) => {
   res.render(
     'transactions/new.ejs',
     {
@@ -101,7 +101,7 @@ router.get('/new/:txType', (req, res) => {
 // })
 
 ///SHOW
-router.get('/:id', (req, res) => {
+router.get('/:id', isAuthenticated, (req, res) => {
   console.log(req.params.id);
   Transaction.findById(req.params.id, (err, txRecord) => {
     res.render(
