@@ -1,3 +1,6 @@
+<p>
+   <img src="https://i.imgur.com/VPyR8v3.png"/>
+</p>
 ![logo](https://i.imgur.com/VPyR8v3.png)
 # Monnaie App
 ###### Project 02 Submission for the General Assembly SEI bootcamp
